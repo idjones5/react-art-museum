@@ -6,7 +6,7 @@ function GalleryNavigation({ galleries }) {
         <>
         <h1 className="title">Gallery Navigation</h1>
         <div className="homepage">
-            <NavLink exact to="/">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
         </div>
         <div className="nav-container">
             <nav className="nav">
