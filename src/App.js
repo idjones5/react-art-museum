@@ -8,14 +8,20 @@ function App() {
   return (
       <div className="page-wrapper">
         
-        {/* <Switch> */}
-          <Route>
-          <GalleryNavigation  galleries={harvardArt.records}/>
+        <Switch>
+          {/* <Route exact path="/">
+            <h2>Home Page</h2>
+          </Route> */}
+          <Route exact path="/">
+          <GalleryNavigation galleries={harvardArt.records}/>
           </Route>
           <Route path="/galleries/:galleryId">
             <GalleryView galleries={harvardArt.records}/>
           </Route>
-        {/* </Switch> */}
+          <Route>
+            <h1>404 Not Found: This Page Does Not Exist</h1>
+          </Route>
+        </Switch>
       </div>
   );
 }
