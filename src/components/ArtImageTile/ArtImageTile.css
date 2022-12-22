@@ -1,0 +1,13 @@
+.images {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
