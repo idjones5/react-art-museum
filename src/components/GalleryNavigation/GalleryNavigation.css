@@ -1,0 +1,32 @@
+.title {
+    text-align: center;
+}
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.nav-container {
+    border: black solid;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: bisque;
+}
+
+.nav {
+    display: inline;
+    
+}
+
+.links {
+    padding: 5px;
+    margin: 5px;
+}
+
+.active {
+    color: rgb(67, 121, 238);
+    font-weight: 700;
+}
