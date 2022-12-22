@@ -12,7 +12,7 @@ function GalleryNavigation({ galleries }) {
             <nav className="nav">
                 {
                     galleries.map(gallery => (
-                        <NavLink className="links" to={`/galleries/${gallery.galleryid}`} key={gallery.id}>{gallery.name}</NavLink> 
+                        <NavLink className="links" to={`/galleries/${gallery.galleryid}`} key={gallery.id}>{gallery.name} - {gallery.theme}</NavLink> 
                     ))
                 }
             </nav>

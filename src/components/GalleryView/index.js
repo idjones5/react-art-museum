@@ -1,5 +1,6 @@
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, Route, useParams, Switch } from "react-router-dom";
 import ArtImageTile from "../ArtImageTile";
+import ArtDescription from "../ArtDescription";
 
 
 function GalleryView({ galleries }) {
@@ -17,9 +18,18 @@ function GalleryView({ galleries }) {
     
     return (
         <div>
-        <h1>{gallery.name}</h1>
-        <ArtImageTile art={artworks}/>
+        <h1 style={{textAlign: "center"}}>{gallery.name}: <span style={{fontWeight: 400}}>{gallery.theme}</span></h1>
         <NavLink to="/">Home</NavLink>
+        <p>{gallery.labeltext}</p>
+
+        <Switch>
+            <Route exact path={`/galleries/:galleryId`}>
+               <ArtImageTile art={artworks} />
+            </Route>
+            <Route path={`/galleries/:galleryId/art/:artId`}>
+               <ArtDescription art={artworks} gallery={gallery}/>
+            </Route>
+        </Switch>
         </div>
     )
 }

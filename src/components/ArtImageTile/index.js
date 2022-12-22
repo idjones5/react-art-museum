@@ -1,14 +1,16 @@
+import { NavLink } from 'react-router-dom';
 import './ArtImageTile.css';
+import {  useRouteMatch } from 'react-router-dom'
 
-function ArtImageTile({art}) {
-    var id = 1;
+function ArtImageTile({ art }) {
+    const { url } = useRouteMatch();
     return (
         <div>
-            <h1>Artworks</h1>
+            <h1 className="title">Artworks</h1>
             <div className='image-container'>
             {
                 art.map((images) => (
-                    <img className="images" key={`${id++}`} src={`${images.baseimageurl}`}/>
+                    <NavLink to={`${url}/art/${images.imageid}`} key={`${images.imageid}`}><img className="images" src={`${images.baseimageurl}`}/></NavLink>
                 ))
             }
             </div>

@@ -9,9 +9,6 @@ function App() {
       <div className="page-wrapper">
         
         <Switch>
-          {/* <Route exact path="/">
-            <h2>Home Page</h2>
-          </Route> */}
           <Route exact path="/">
           <GalleryNavigation galleries={harvardArt.records}/>
           </Route>
